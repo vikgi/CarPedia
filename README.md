@@ -1,70 +1,108 @@
-# Getting Started with Create React App
+# 🚗 CarPedia
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+CarPedia is a full-stack car catalog web application where users can sign up, log in, add new cars, and view their personalized list of cars. It features a responsive Bootstrap UI, JWT-based authentication, and a Go/Gin backend with MongoDB.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 📸 Screenshot
 
-### `npm start`
+![Screenshot](./screenshots/output.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 📁 Project Structure
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+carpedia/
+├── client/ # React frontend (Bootstrap styled)
+│ ├── public/
+│ ├── src/
+│ └── package.json
+├── server/ # Go + Gin backend
+│ ├── controllers/
+│ ├── models/
+│ ├── routes/
+│ └── main.go
+├── screenshots/ # Put your screenshots here
+├── README.md
+└── .gitignore
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠️ Tech Stack
 
-### `npm run build`
+- **Frontend:** React, Bootstrap, Axios
+- **Backend:** Go, Gin (REST API)
+- **Database:** MongoDB
+- **Authentication:** JWT
+- **Icons:** React Icons, Bootstrap Icons
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## ⚙️ Features
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- 🔐 **User Authentication** (Sign up & Login)
+- 🚙 **Add New Cars** with model, brand, year, color, price, description, image
+- 📋 **My Cars Dashboard** to view all user-added cars
+- 🔒 **Protected Routes** for authenticated users only
+- 🔧 **Responsive Design** with Bootstrap
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🚀 Getting Started
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Prerequisites
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **Node.js** & **npm**
+- **Go** (1.18+)
+- **MongoDB** (local or Atlas)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 1. Clone the Repo
 
-## Learn More
+```bash
+git clone https://github.com/yourusername/carpedia.git
+cd carpedia
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. Frontend Setup
+cd client
+npm install
+npm start
+# App runs at http://localhost:3000
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. Backend Setup
 
-### Code Splitting
+cd ../server
+go mod tidy
+go run main.go
+# API server runs at http://localhost:5000
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+🔄 Architecture Overview
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+[ React Frontend ]
+       ↕ Axios
+[ Go + Gin Backend ]
+       ↕ MongoDB
 
-### Making a Progressive Web App
+1. React Frontend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+    Axios calls to /api/login, /api/signup, /api/cars/user
 
-### Advanced Configuration
+    Stores JWT and userId in localStorage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+2. Go + Gin Backend
 
-### Deployment
+    Auth routes (/api/login, /api/signup)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+    Car routes (/api/cars/user) with JWT validation
 
-### `npm run build` fails to minify
+3. MongoDB
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    users collection
+
+    cars collection (each doc has userId reference)
+
+✍️ Author
+Vikas
+
+GitHub: https://github.com/vikgi
+
+Email: vikasgv02@gmail.com
+```
