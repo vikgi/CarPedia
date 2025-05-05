@@ -1,0 +1,29 @@
+[
+  {
+    "model": "Civic",
+    "brand": "Honda",
+    "year": "2020",
+    "color": "Red",
+    "price": "20000",
+    "description": "A sleek and reliable compact car.",
+    "imgurl": "https://imgd.aeplcdn.com/664x374/n/cw/ec/27074/civic-exterior-right-front-three-quarter-148156.jpeg?q=80"
+  },
+  {
+    "model": "Model S",
+    "brand": "Tesla",
+    "year": "2022",
+    "color": "Black",
+    "price": "80000",
+    "description": "A powerful electric vehicle with autopilot features.",
+    "imgurl": "https://images.hdqwalls.com/wallpapers/tesla-roadster-2020-3p.jpg"
+  },
+  {
+    "model": "Corolla",
+    "brand": "Toyota",
+    "year": "2019",
+    "color": "White",
+    "price": "18000",
+    "description": "A fuel-efficient and affordable sedan.",
+    "imgurl": "https://media.ed.edmunds-media.com/toyota/corolla/2023/oem/2023_toyota_corolla_sedan_xse_fq_oem_1_1280.jpg"
+  }
+]

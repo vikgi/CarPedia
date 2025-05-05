@@ -1,0 +1,74 @@
+/* Cars.css */
+.container {
+    padding: 0 15px;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    /* Prevent horizontal overflow */
+}
+
+.car-list-header {
+    position: relative;
+    margin-bottom: 1.5rem;
+    padding-top: 1rem;
+}
+
+.car-list-header h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+}
+
+.row {
+    margin: 0 -8px;
+    /* Compensate for column padding */
+}
+
+/* Card styling */
+.card {
+    margin-bottom: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .car-list-header h2 {
+        font-size: 1.5rem;
+        margin-top: 0.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0 8px;
+    }
+
+    .car-list-header {
+        margin-bottom: 1rem;
+    }
+
+    .car-list-header h2 {
+        font-size: 1.3rem;
+        padding: 0 10px;
+    }
+
+    .row {
+        margin: 0 -4px;
+    }
+
+    .col-sm-6 {
+        padding: 0 4px;
+    }
+}
