@@ -8,24 +8,6 @@ CarPedia is a full-stack car catalog web application where users can sign up, lo
 
 ![Screenshot](./screenshots/output.png)
 
-## 📁 Project Structure
-
-carpedia/
-├── client/ # React frontend (Bootstrap styled)
-│ ├── public/
-│ ├── src/
-│ └── package.json
-├── server/ # Go + Gin backend
-│ ├── controllers/
-│ ├── models/
-│ ├── routes/
-│ └── main.go
-├── screenshots/ # Put your screenshots here
-├── README.md
-└── .gitignore
-
----
-
 ## 🛠️ Tech Stack
 
 - **Frontend:** React, Bootstrap, Axios
