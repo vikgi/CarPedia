@@ -43,14 +43,13 @@ git clone https://github.com/yourusername/carpedia.git
 cd carpedia
 
 2. Frontend Setup
-cd client
 npm install
-npm start
+npm run start
 # App runs at http://localhost:3000
 
 3. Backend Setup
 
-cd ../server
+cd /backend
 go mod tidy
 go run main.go
 # API server runs at http://localhost:5000
