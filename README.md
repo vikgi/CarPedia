@@ -40,7 +40,7 @@ CarPedia is a full-stack car catalog web application where users can sign up, lo
 
 ```bash
 git clone https://github.com/yourusername/carpedia.git
-cd carpedia
+cd carPedia
 
 2. Frontend Setup
 npm install
