@@ -54,6 +54,9 @@ go mod tidy
 go run main.go
 # API server runs at http://localhost:5000
 
+Note: IF the backend doesnt start on http://localhost:5000, please adjust the api endpoint according to server ip
+we need to make this change everywhere 
+
 
 🔄 Architecture Overview
 
